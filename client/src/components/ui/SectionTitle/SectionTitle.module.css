@@ -1,0 +1,61 @@
+.sectionTitle {
+  margin-bottom: var(--spacing-4);
+  position: relative;
+}
+
+.sectionTitle h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-1);
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.sectionTitle p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-2);
+  max-width: 700px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.light h2 {
+  color: var(--text-primary);
+}
+
+.light p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle p {
+    font-size: 1rem;
+  }
+}

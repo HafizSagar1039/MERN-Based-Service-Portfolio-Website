@@ -1,0 +1,120 @@
+.footer {
+  background-color: var(--bg-darker);
+  padding: var(--spacing-5) 0 var(--spacing-2);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-6);
+}
+
+.footerWidget {
+  margin-bottom: var(--spacing-3);
+}
+
+.widgetTitle {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: var(--spacing-1);
+}
+
+.widgetTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: var(--spacing-1);
+}
+
+.menuItem {
+  list-style:disc;            /* removes bullet */
+  border-bottom: none;         /* removes any bottom border */
+   margin: 0.5rem 0;           /* optional spacing */
+}
+
+.menuLink {
+  text-decoration: none;       /* removes underline */
+  color: inherit;              /* keeps the text color */
+}
+
+
+.footerLinks a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footerLinks a:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-2);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.socialLinks a:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.contactInfo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactInfo li {
+  display: flex;
+  margin-bottom: var(--spacing-1);
+  align-items: flex-start;
+}
+
+.contactIcon {
+  margin-right: var(--spacing-1);
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.footerBottom {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding-top: var(--spacing-4);
+  }
+  
+  .widgetTitle {
+    margin-top: var(--spacing-1);
+  }
+}

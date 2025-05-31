@@ -1,0 +1,57 @@
+.notFound {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-5) 0;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: var(--spacing-2);
+  line-height: 1;
+}
+
+.errorTitle {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-3);
+  font-weight: 700;
+}
+
+.errorMessage {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+  
+  .errorTitle {
+    font-size: 2rem;
+  }
+  
+  .errorMessage {
+    font-size: 1.1rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

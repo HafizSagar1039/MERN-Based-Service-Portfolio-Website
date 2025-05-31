@@ -1,0 +1,106 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+              url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
+  margin-top: -60px; /* Compensate for navbar height */
+  padding: var(--spacing-4) var(--spacing-2);
+}
+
+
+.sections {
+  padding: 4rem 2rem;
+  position: relative;
+  background-color: #000;
+  z-index: 1;
+}
+
+/* Colorful glowing line at bottom */
+.sections::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #47e5bc, #ff6ec4);
+  background-size: 300% 100%;
+  animation: glowingLine 4s ease infinite;
+  box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5, 0 0 30px #47e5bc;
+}
+
+@keyframes glowingLine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.loginContainer {
+  width: 100%;
+  max-width: 450px;
+  margin: 60px auto 0; /* Add top margin to compensate for navbar */
+}
+
+.loginCard {
+  background-color: rgba(30, 30, 30, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: var(--spacing-4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loginHeader {
+  margin-bottom: var(--spacing-3);
+  text-align: center;
+}
+
+.loginHeader h2 {
+  color: var(--primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.loginHeader p {
+  color: var(--text-secondary);
+}
+
+.formControl {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(45, 45, 45, 0.9) !important;
+}
+.formControl::placeholder{
+  color:var(--text-secondary) !important;
+  opacity: 0.4 !important;
+}
+.label{
+  color:var(--text-primary) !important;
+  font-size: 1rem !important;
+}
+.loginButton {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  margin-top: var(--spacing-2);
+}
+
+.alert {
+  margin-bottom: var(--spacing-3);
+}
+
+@media (max-width: 576px) {
+  .loginCard {
+    padding: var(--spacing-3);
+  }
+}

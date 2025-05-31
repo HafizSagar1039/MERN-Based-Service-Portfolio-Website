@@ -1,0 +1,14 @@
+.section {
+  padding: var(--spacing-5) 0;
+  position: relative;
+}
+
+.dark {
+  background-color: var(--bg-darker);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-4) 0;
+  }
+}

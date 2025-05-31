@@ -1,0 +1,140 @@
+.dashboardCard {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+  margin-bottom: var(--spacing-3);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding-bottom: var(--spacing-1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tableResponsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table th {
+  background-color: var(--bg-darker);
+  color: var(--text-primary);
+  font-weight: 600;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table td {
+  vertical-align: middle;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.new {
+  background-color: rgba(0, 168, 255, 0.15);
+  color: var(--primary);
+}
+
+.pending {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: var(--warning);
+}
+
+.responded {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: var(--success);
+}
+
+.closed {
+  background-color: rgba(108, 117, 125, 0.15);
+  color: #adb5bd;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4) 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 168, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: var(--spacing-2);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.noMessages {
+  padding: var(--spacing-3);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Message Detail Modal */
+.messageDetail {
+  margin-bottom: var(--spacing-2);
+}
+
+.messageDetail h5 {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.messageDetail p {
+  margin-bottom: 0;
+}
+
+.messageContent {
+  background-color: var(--bg-lighter);
+  padding: var(--spacing-2);
+  border-radius: 8px;
+  white-space: pre-wrap;
+  border-left: 3px solid var(--primary);
+}
+
+.formControl {
+  background-color: var(--bg-lighter) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+.formControl:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 255, 0.25) !important;
+  border-color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

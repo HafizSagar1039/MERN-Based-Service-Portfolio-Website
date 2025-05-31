@@ -1,0 +1,121 @@
+.portfolioCard {
+  height: 100%;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border-radius: 8px;
+  overflow: hidden;
+  border: none !important;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all var(--transition-normal);
+}
+
+.portfolioCard:hover .image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-normal);
+}
+
+.portfolioCard:hover .overlay {
+  opacity: 1;
+}
+
+.viewDetails {
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 30px;
+  transition: all var(--transition-normal);
+}
+
+.portfolioCard:hover .viewDetails {
+  background-color: var(--primary);
+}
+
+.cardBody {
+  padding: var(--spacing-2);
+}
+
+.category {
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-1);
+  font-weight: 600;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Modal Styles */
+.modalImage {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-2);
+}
+
+.modalCategory {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-2);
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  background-color: rgba(0, 168, 255, 0.1);
+  border-radius: 30px;
+}
+
+.modalTitle {
+  margin: var(--spacing-2) 0;
+  font-weight: 600;
+}
+
+.technologiesTitle {
+  margin: var(--spacing-2) 0 var(--spacing-1);
+  font-weight: 600;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.technology {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background-color: var(--bg-lighter);
+  border-radius: 30px;
+  font-size: 0.9rem;
+}

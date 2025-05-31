@@ -1,0 +1,68 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 25px;
+  right: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Tooltip container */
+.whatsapp-button::before {
+  content: "Chat with us on WhatsApp";
+  position: absolute;
+  bottom: 120%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #222;
+  color: #fff;
+  padding: 6px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.whatsapp-button:hover::before {
+  opacity: 1;
+}
+
+/* Ring animation */
+.icon-ring {
+  animation: ring 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  60%, 100% { transform: rotate(0); }
+}
