@@ -224,7 +224,7 @@ const Contact = () => {
                   </div>
                   <div className={styles.infoContent}>
                     <h4>Email Address</h4>
-                    <p>info@techvision.com</p>
+                    <p>sagatech@gmail.com</p>
                   </div>
                 </div>
                 

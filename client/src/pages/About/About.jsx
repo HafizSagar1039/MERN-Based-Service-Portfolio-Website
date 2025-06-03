@@ -14,7 +14,7 @@ const About = () => {
       <section className={styles.hero}>
         <div className={styles.overlay}></div>
         <div className={styles.content}>
-          <h1>About Hafiz Sagar Tech</h1>
+          <h1>About SagaTech</h1>
           <p>Learn more about our company, our mission, and our team</p>
         </div>
       </section>
@@ -34,11 +34,11 @@ const About = () => {
             <div className={styles.aboutContent}>
               <SectionTitle 
                 title="Our Story" 
-                subtitle="How TechVision came to be and what drives us forward."
+                subtitle="How SagaTech came to be and what drives us forward."
                 light
               />
               <p>
-                TechVision was founded in 2015 by a group of tech enthusiasts who shared a vision of making 
+                SagaTech was founded in 2015 by a group of tech enthusiasts who shared a vision of making 
                 digital technology accessible and beneficial for businesses of all sizes. What started as a 
                 small web development team has grown into a full-service digital agency with expertise in 
                 various domains.
@@ -49,7 +49,7 @@ const About = () => {
                 the ever-evolving digital landscape.
               </p>
               <p>
-                Today, TechVision stands as a trusted partner for businesses looking to establish or enhance 
+                Today, SagaTech stands as a trusted partner for businesses looking to establish or enhance 
                 their digital presence. Our comprehensive approach combines technical expertise with creative 
                 thinking to deliver solutions that drive real business results.
               </p>

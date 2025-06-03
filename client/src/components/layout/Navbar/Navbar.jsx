@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   Container,
   Navbar as BootstrapNavbar,
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
   const { isAuthenticated, logout } = useContext(AuthContext);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,18 @@ const Navbar = () => {
     setExpanded(false);
   }, [location]);
 
+  // ✅ Shortcut Logic (Ctrl + Alt + A)
+  useEffect(() => {
+    const handleShortcut = (e) => {
+      if (e.ctrlKey && e.altKey && e.key === 'a') {
+        navigate('/login');
+      }
+    };
+
+    window.addEventListener('keydown', handleShortcut);
+    return () => window.removeEventListener('keydown', handleShortcut);
+  }, [navigate]);
+
   const navbarClass = scrolled
     ? `${styles.navbar} ${styles.scrolled}`
     : styles.navbar;
@@ -50,9 +63,9 @@ const Navbar = () => {
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className={styles.brand}>
           <h2 className={styles.logoicon}>
-           <FaLaptopCode />
+            <FaLaptopCode />
           </h2>
-          <span className={styles.logo}> Hafiz Sagar Tech</span>
+          <span className={styles.logo}> SagaTech </span>
         </BootstrapNavbar.Brand>
 
         <BootstrapNavbar.Toggle
@@ -64,7 +77,7 @@ const Navbar = () => {
         <BootstrapNavbar.Offcanvas
           id="offcanvas-navbar-nav"
           aria-labelledby="offcanvas-navbar-label"
-          placement="start" // This makes it open from the left
+          placement="start"
           show={expanded}
           onHide={() => setExpanded(false)}
           className={styles.offcanvas}
@@ -72,7 +85,7 @@ const Navbar = () => {
           <Offcanvas.Header
             closeButton
             className={styles.offcanvasHeader}
-            closeVariant="white" // This makes the X white
+            closeVariant="white"
           >
             <Offcanvas.Title className="text-light" id="offcanvas-navbar-label">
               Menu
@@ -102,14 +115,11 @@ const Navbar = () => {
                     Admin
                   </Nav.Link>
                   <Nav.Link onClick={logout} className={styles.navLink}>
-                     <Button 
-                  variant="outline-info">
-                    Logout
-                    </Button>
+                    <Button variant="outline-info">Logout</Button>
                   </Nav.Link>
                 </>
               ) : (
-                <Nav.Link as={NavLink} to="/login" className={styles.navLink}>
+                <Nav.Link as={NavLink} to="/login" className={styles.navLink} style={{ display: 'none' }}>
                   <Button variant="outline-info">Login</Button>
                 </Nav.Link>
               )}

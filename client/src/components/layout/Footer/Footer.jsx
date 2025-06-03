@@ -20,7 +20,7 @@ const Footer = () => {
         <Row className="g-4">
           <Col lg={3} md={6}>
             <div className={styles.footerWidget}>
-              <h4 className={styles.widgetTitle}>Hafiz Sagar Tech</h4>
+              <h4 className={styles.widgetTitle}>SagaTech</h4>
               <p>
                 Providing innovative solutions for modern businesses. We help
                 companies transform their digital presence and achieve their
@@ -147,7 +147,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <FaEnvelope className={styles.contactIcon} />
-                  <span>example@gmail.com</span>
+                  <span>sagatech@gmail.com</span>
                 </li>
               </ul>
             </div>

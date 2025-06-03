@@ -99,7 +99,7 @@ const Home = () => {
                 light
               />
               <p>
-                Founded in 2015, Hafiz Sagar Tech has grown from a small startup to a comprehensive digital agency 
+                Founded in 2015, SagaTech has grown from a small startup to a comprehensive digital agency 
                 serving clients worldwide. Our mission is to deliver innovative, high-quality solutions that 
                 drive real business results.
               </p>
@@ -165,44 +165,45 @@ const Home = () => {
       </Section>
       
       {/* Testimonials */}
-      <Section dark  className={styles.sections}>
-        <SectionTitle 
-          title="What Our Clients Say" 
-          subtitle="Don't just take our word for it. Here's what our clients have to say about working with us."
-          centered
-          light
-        />
-        
-        <Row className="g-4">
-          <Col lg={4} md={6}>
-            <TestimonialCard 
-              quote="TechVision transformed our outdated website into a modern, user-friendly platform that has significantly increased our online conversions."
-              name="Sarah Johnson"
-              position="Marketing Director"
-              company="Bloom Retail"
-              avatar="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-          </Col>
-          <Col lg={4} md={6}>
-            <TestimonialCard 
-              quote="The mobile app developed by TechVision has revolutionized how we engage with our customers. User adoption exceeded our expectations."
-              name="Michael Chang"
-              position="CTO"
-              company="HealthFirst"
-              avatar="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-          </Col>
-          <Col lg={4} md={6}>
-            <TestimonialCard 
-              quote="Working with TechVision was a game-changer for our business. Their strategic approach to digital marketing doubled our lead generation."
-              name="Emma Roberts"
-              position="CEO"
-              company="Innovate Solutions"
-              avatar="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-          </Col>
-        </Row>
-      </Section>
+  <Section dark className={styles.sections}>
+  <SectionTitle 
+    title="What Our Clients Say" 
+    subtitle="Don't just take our word for it. Here's what our clients have to say about working with us."
+    centered
+    light
+  />
+  
+  <Row className="g-4">
+    <Col lg={4} md={6}>
+      <TestimonialCard 
+        quote="SagaTech transformed our outdated website into a modern, user-friendly platform that has significantly increased our online conversions."
+        name={<span style={{ color: '#66C6F0' }}>Sarah Johnson</span>}
+        position="Marketing Director"
+        company="Bloom Retail"
+        avatar="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
+    </Col>
+    <Col lg={4} md={6}>
+      <TestimonialCard 
+        quote="The mobile app developed by SagaTech has revolutionized how we engage with our customers. User adoption exceeded our expectations."
+        name={<span style={{ color: '#66C6F0' }}>Michael Chang</span>}
+        position="CTO"
+        company="HealthFirst"
+        avatar="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
+    </Col>
+    <Col lg={4} md={6}>
+      <TestimonialCard 
+        quote="Working with SagaTech was a game-changer for our business. Their strategic approach to digital marketing doubled our lead generation."
+        name={<span style={{ color: '#66C6F0' }}>Emma Roberts</span>}
+        position="CEO"
+        company="Innovate Solutions"
+        avatar="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
+    </Col>
+  </Row>
+</Section>
+
       
       {/* CTA Section */}
       <section className={`${styles.cta} ${styles.sections}`}>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import axios from 'axios'
+import NProgress from 'nprogress'        // Import NProgress
+import 'nprogress/nprogress.css'         // Import NProgress CSS
 
 // Components
 import Navbar from './components/layout/Navbar/Navbar'
@@ -25,6 +27,7 @@ import styles from './App.module.css'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
+  const location = useLocation()
 
   useEffect(() => {
     // Set up axios defaults
@@ -36,6 +39,15 @@ function App() {
     }, 1000)
   }, [])
 
+  // NProgress start/stop on route change
+  useEffect(() => {
+    NProgress.start()
+    // Small delay to simulate progress bar fill
+    setTimeout(() => {
+      NProgress.done()
+    }, 300)  // Adjust this time for speed of progress bar
+  }, [location])
+
   if (isLoading) {
     return (
       <div className={styles.loadingContainer}>
@@ -46,7 +58,7 @@ function App() {
 
   return (
     <AuthProvider>
-        <ScrollToTop />
+      <ScrollToTop />
       <div className={styles.app}>
         <Navbar />
         <main className={styles.mainContent}>
@@ -61,7 +73,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-         <WhatsAppButton />
+        <WhatsAppButton />
         <Footer />
       </div>
     </AuthProvider>
